@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lauvra — Launch Your Business Online Today</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0d0a;--ink2:#1e1b16;--ink3:#2d2921;
+  --paper:#faf8f4;--paper2:#f2ede4;--paper3:#e8e0d2;
+  --muted:#8c8070;--muted2:#6b6055;
+  --accent:#c84b2f;--accent2:#e05a38;--accentw:#f0a070;
+  --gold:#c9963a;--goldl:#f5e6c8;
+  --green:#2d6a4f;--greenl:#d8f3dc;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Outfit',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(250,248,244,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--paper3)}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:900;font-size:1.6rem;letter-spacing:-0.03em;color:var(--ink);text-decoration:none;font-style:italic}
+.lmark{width:38px;height:38px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lmark svg{width:20px;height:20px}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{background:var(--ink);color:var(--paper);padding:.5rem 1.4rem;border-radius:6px;font-weight:600;font-size:.875rem;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--accent)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:9rem 2.5rem 5rem;position:relative;overflow:hidden;background:var(--ink)}
+.htex{position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(200,75,47,.15) 0%,transparent 50%),radial-gradient(circle at 80% 20%,rgba(201,150,58,.1) 0%,transparent 50%);pointer-events:none}
+.hinner{max-width:1100px;margin:0 auto;width:100%;position:relative}
+.heyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accentw);font-weight:600;margin-bottom:2rem}
+.hdot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:var(--serif);font-size:clamp(3.5rem,8vw,7rem);font-weight:900;line-height:.95;letter-spacing:-0.04em;color:var(--paper);margin-bottom:2rem}
+.hero h1 .la{font-style:italic;color:var(--accentw);display:block}
+.hbody{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-top:3rem}
+.hsub{font-size:1.1rem;color:rgba(250,248,244,.55);line-height:1.75;font-weight:300;max-width:420px}
+.hactions{display:flex;flex-direction:column;gap:.75rem;align-items:flex-end}
+.btn-hero{background:var(--accent);color:var(--paper);padding:1rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;transition:transform .2s,background .2s;font-family:var(--sans);white-space:nowrap}
+.btn-hero:hover{transform:translateY(-2px);background:var(--accent2)}
+.btn-ghost2{color:rgba(250,248,244,.5);font-size:.875rem;text-decoration:none;transition:color .2s}
+.btn-ghost2:hover{color:var(--paper)}
+.hstats{display:flex;gap:0;margin-top:5rem;border-top:1px solid rgba(250,248,244,.1);padding-top:2rem}
+.hstat{flex:1;padding-right:2rem;border-right:1px solid rgba(250,248,244,.08)}
+.hstat:last-child{border-right:none;padding-right:0;padding-left:2rem}
+.hstat:not(:first-child){padding-left:2rem}
+.hsnum{font-family:var(--serif);font-size:2.8rem;font-weight:900;color:var(--paper);letter-spacing:-0.04em;line-height:1}
+.hsnum em{font-style:normal;color:var(--accentw)}
+.hslabel{font-size:.75rem;color:rgba(250,248,244,.4);margin-top:.35rem;letter-spacing:.04em;text-transform:uppercase}
+
+/* SECTIONS */
+section{padding:7rem 2.5rem}
+.container{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:1rem;font-family:var(--sans)}
+.stitle{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:900;letter-spacing:-0.03em;line-height:1.05;margin-bottom:1.25rem}
+.stitle em{font-style:italic;color:var(--accent)}
+.ssub{font-size:1.05rem;color:var(--muted);max-width:520px;line-height:1.75;font-weight:300}
+
+/* FEATURES */
+#features{background:var(--paper2)}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem}
+.fcard{background:var(--paper);border:1px solid var(--paper3);border-radius:16px;padding:2rem;transition:border-color .25s,box-shadow .25s}
+.fcard:hover{border-color:var(--accent);box-shadow:0 4px 24px rgba(200,75,47,.08)}
+.fnum{font-family:var(--serif);font-size:3rem;font-weight:900;color:var(--paper3);letter-spacing:-0.05em;line-height:1;margin-bottom:1rem}
+.fname{font-family:var(--serif);font-weight:700;font-size:1.15rem;margin-bottom:.5rem;letter-spacing:-0.01em}
+.fdesc{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+/* PRICING */
+#pricing{background:var(--ink)}
+#pricing .stitle{color:var(--paper)}
+#pricing .eyebrow{color:var(--accentw)}
+#pricing .ssub{color:rgba(250,248,244,.45)}
+.ptoggle{display:flex;align-items:center;gap:4px;background:rgba(250,248,244,.06);border:1px solid rgba(250,248,244,.1);border-radius:8px;padding:4px;width:fit-content;margin:2.5rem auto 3.5rem}
+.ptab{padding:.45rem 1.4rem;border-radius:5px;font-size:.875rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:rgba(250,248,244,.45);transition:all .2s;font-family:var(--sans)}
+.ptab.active{background:var(--accent);color:var(--paper)}
+.spill{font-size:.65rem;background:rgba(201,150,58,.2);color:var(--gold);padding:2px 8px;border-radius:20px;margin-left:.3rem;letter-spacing:.04em}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;align-items:start}
+.pcard{background:rgba(250,248,244,.04);border:1px solid rgba(250,248,244,.09);border-radius:20px;padding:2.25rem;position:relative;transition:border-color .2s}
+.pcard:hover{border-color:rgba(250,248,244,.2)}
+.pcard.pop{background:rgba(200,75,47,.08);border:1px solid rgba(200,75,47,.35)}
+.ppill{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--paper);font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 16px;border-radius:20px;white-space:nowrap;font-family:var(--sans)}
+.pname{font-family:var(--serif);font-weight:900;font-size:1.35rem;color:var(--paper);margin-bottom:.2rem;letter-spacing:-0.02em}
+.ptag{font-size:.8rem;color:rgba(250,248,244,.4);margin-bottom:1.75rem}
+.pprice{display:flex;align-items:baseline;gap:4px;margin-bottom:.2rem}
+.pdollar{font-family:var(--serif);font-size:3.5rem;font-weight:900;letter-spacing:-0.05em;color:var(--paper);line-height:1}
+.pper{font-size:.9rem;color:rgba(250,248,244,.4)}
+.pannual{font-size:.8rem;color:rgba(250,248,244,.4);margin-bottom:2rem}
+.monthly-p{display:block}.annual-p{display:none}
+body.annual .annual-p{display:block}body.annual .monthly-p{display:none}
+
+/* BREAKDOWN */
+.bkdown{background:rgba(0,0,0,.3);border:1px solid rgba(250,248,244,.07);border-radius:12px;padding:1.1rem;margin-bottom:1.25rem}
+.bkeyebrow{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accentw);font-weight:700;margin-bottom:.8rem;font-family:var(--sans)}
+.bkrow{display:flex;justify-content:space-between;align-items:center;font-size:.775rem;padding:4px 0;border-bottom:1px solid rgba(250,248,244,.04)}
+.bkrow:last-child{border-bottom:none}
+.bkl{color:rgba(250,248,244,.45)}.bkr{font-weight:600;color:rgba(250,248,244,.85)}
+.bkr.hi{color:var(--accentw)}.bkr.gold{color:var(--gold)}
+.bkfoot{display:flex;justify-content:space-between;font-size:.8rem;font-weight:600;padding-top:.6rem;margin-top:.5rem;border-top:1px solid rgba(250,248,244,.1)}
+.bkfl{color:rgba(250,248,244,.4)}.bkfr{color:rgba(250,248,244,.7)}
+.saveband{background:rgba(45,106,79,.18);border:1px solid rgba(45,106,79,.3);border-radius:10px;padding:.7rem 1rem;font-size:.78rem;color:#6ee7b7;line-height:1.55;margin-bottom:1.25rem}
+.saveband strong{color:#a7f3d0;font-weight:700}
+.ful{list-style:none;margin-bottom:1.75rem}
+.ful li{display:flex;align-items:flex-start;gap:.65rem;font-size:.875rem;color:rgba(250,248,244,.5);padding:.3rem 0}
+.ful li.hi{color:rgba(250,248,244,.9);font-weight:500}
+.chk{width:16px;height:16px;flex-shrink:0;margin-top:2px;stroke:var(--accentw);fill:none;stroke-width:2.5}
+.pbtn{display:block;text-align:center;padding:.9rem;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;font-family:var(--sans);letter-spacing:.01em}
+.pbtn-acc{background:var(--accent);color:var(--paper)}
+.pbtn-acc:hover{background:var(--accent2);transform:translateY(-1px)}
+.pbtn-out{background:transparent;color:rgba(250,248,244,.6);border:1px solid rgba(250,248,244,.14)}
+.pbtn-out:hover{background:rgba(250,248,244,.05);color:var(--paper);border-color:rgba(250,248,244,.3)}
+.pcard.elite{background:linear-gradient(145deg,rgba(109,40,217,.18),rgba(79,70,229,.12));border:1px solid rgba(139,92,246,.35)}
+.pcard.elite .pname{background:linear-gradient(90deg,#c4b5fd,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.pcard.elite .pdollar{color:#c4b5fd}
+.pcard.elite .pper{color:rgba(196,181,253,.5)}
+.pcard.elite .pannual{color:rgba(196,181,253,.4)}
+.pcard.elite .ptag{color:rgba(196,181,253,.5)}
+.pcard.elite .bkeyebrow{color:#c4b5fd}
+.pcard.elite .bkl{color:rgba(196,181,253,.5)}
+.pcard.elite .bkr{color:rgba(255,255,255,.9)}
+.pcard.elite .bkr.hi{color:#c4b5fd}
+.pcard.elite .bkr.gold{color:#fbbf24}
+.pcard.elite .bkfl{color:rgba(196,181,253,.4)}
+.pcard.elite .bkfr{color:rgba(196,181,253,.7)}
+.pcard.elite .ful li{color:rgba(196,181,253,.6)}
+.pcard.elite .ful li.hi{color:#fff}
+.pcard.elite .chk{stroke:#c4b5fd}
+.pcard.elite .saveband{background:rgba(109,40,217,.2);border-color:rgba(139,92,246,.3);color:#ddd6fe}
+.pcard.elite .saveband strong{color:#ede9fe}
+.ppill-elite{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,#7c3aed,#4f46e5);color:#fff;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 16px;border-radius:20px;white-space:nowrap;font-family:var(--sans)}
+.badge-3d{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:.5rem}
+.badge-3d-scale{background:linear-gradient(90deg,rgba(45,106,79,.4),rgba(13,148,136,.3));color:#6ee7b7;border:1px solid rgba(52,211,153,.2)}
+.badge-3d-elite{background:linear-gradient(90deg,rgba(109,40,217,.5),rgba(79,70,229,.4));color:#c4b5fd;border:1px solid rgba(139,92,246,.3)}
+.domain-tag{display:inline-flex;align-items:center;gap:4px;font-size:.7rem;font-weight:600;padding:3px 9px;border-radius:20px;margin-bottom:.5rem}
+.dt-none{background:rgba(200,75,47,.1);color:var(--accentw);border:1px solid rgba(200,75,47,.2)}
+.dt-yr1{background:rgba(45,106,79,.15);color:#6ee7b7;border:1px solid rgba(45,106,79,.25)}
+.dt-yr2{background:rgba(109,40,217,.2);color:#c4b5fd;border:1px solid rgba(139,92,246,.25)}
+/* BLOG ADD-ON */
+.blogsec{background:var(--ink2);border:1px solid rgba(250,248,244,.08);border-radius:16px;padding:2rem 2.5rem;margin-top:3rem}
+.blogtitle{font-family:var(--serif);font-size:1.3rem;font-weight:900;letter-spacing:-.02em;color:var(--paper);margin-bottom:.5rem}
+.blogsub{font-size:.875rem;color:rgba(250,248,244,.5);margin-bottom:1.75rem;line-height:1.7;max-width:580px;font-weight:300}
+.blogcards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.blogcard{background:rgba(250,248,244,.05);border:1px solid rgba(250,248,244,.09);border-radius:12px;padding:1.5rem;text-align:center;transition:border-color .2s}
+.blogcard:hover{border-color:rgba(250,248,244,.2)}
+.blogcard.featured{background:rgba(201,150,58,.1);border:1px solid rgba(201,150,58,.3)}
+.blognum{font-family:var(--serif);font-size:2.8rem;font-weight:900;color:var(--paper);letter-spacing:-.04em;line-height:1}
+.blogunit{font-size:.65rem;color:rgba(250,248,244,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem;margin-top:2px}
+.blogprice{font-family:var(--serif);font-size:1.6rem;font-weight:900;letter-spacing:-.03em;color:var(--accentw);margin-bottom:.5rem}
+.blogcard.featured .blogprice{color:var(--gold)}
+.blogdesc{font-size:.78rem;color:rgba(250,248,244,.45);line-height:1.55}
+
+/* LOGO BAND */
+.logoband{margin-top:3rem;background:rgba(201,150,58,.07);border:1px solid rgba(201,150,58,.18);border-radius:16px;padding:2rem 2.5rem;text-align:center}
+.logoband h3{font-family:var(--serif);font-size:1.5rem;font-weight:900;color:var(--paper);margin-bottom:.4rem;letter-spacing:-0.02em}
+.logoband p{font-size:.875rem;color:rgba(250,248,244,.4);max-width:460px;margin:0 auto 1.5rem}
+.lsamples{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.lsamp{background:rgba(0,0,0,.35);border:1px solid rgba(250,248,244,.08);border-radius:10px;width:110px;height:70px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:900;font-size:.9rem;font-style:italic;letter-spacing:-0.02em;transition:border-color .2s;cursor:default}
+.lsamp:hover{border-color:rgba(201,150,58,.4)}
+.lc1{color:var(--accentw)}.lc2{color:#93c5fd}.lc3{color:#f9a8d4}.lc4{color:#a78bfa}.lc5{color:#6ee7b7}
+.lnote{font-size:.7rem;color:rgba(250,248,244,.25);margin-top:1rem}
+
+/* COMPARISON */
+#comparison{background:var(--paper2)}
+.cwrap{overflow-x:auto;margin-top:3.5rem;border:1px solid var(--paper3);border-radius:20px;overflow:hidden;box-shadow:0 4px 40px rgba(15,13,10,.06)}
+table.ct{width:100%;border-collapse:collapse;font-size:.875rem}
+table.ct thead{background:var(--ink2)}
+table.ct th{padding:1.1rem 1.4rem;text-align:center;font-family:var(--sans);font-weight:700;border-bottom:1px solid rgba(250,248,244,.08);color:rgba(250,248,244,.7);font-size:.8rem;letter-spacing:.02em;white-space:nowrap}
+table.ct th.fc{text-align:left;color:rgba(250,248,244,.4)}
+table.ct th.zc{color:var(--accentw)}
+table.ct td{padding:.95rem 1.4rem;text-align:center;border-bottom:1px solid var(--paper3);color:var(--muted)}
+table.ct td.fc{text-align:left;color:var(--ink3);font-weight:500;background:var(--paper)}
+table.ct td.zc{background:rgba(200,75,47,.04);color:var(--ink);font-weight:600}
+table.ct tr:last-child td{border-bottom:none}
+table.ct tr:last-child td.fc{font-family:var(--serif);font-weight:900;font-size:1rem}
+.yes{color:var(--green);font-size:1rem}.no{color:var(--paper3)}
+.zp{color:var(--accent);font-family:var(--serif);font-weight:900;font-size:1.2rem;letter-spacing:-0.02em}
+.bp{color:#c0392b;font-weight:600}
+.cnote{font-size:.72rem;color:var(--muted);margin-top:1rem;line-height:1.6}
+
+/* ADDONS */
+#addons{background:var(--paper)}
+.agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3.5rem}
+.acard{background:var(--paper2);border:1px solid var(--paper3);border-radius:16px;padding:1.75rem;transition:border-color .25s,transform .2s}
+.acard:hover{border-color:var(--accent);transform:translateY(-3px)}
+.acard.urgent{background:rgba(200,75,47,.04);border:1px solid rgba(200,75,47,.2)}
+.acard.urgent:hover{border-color:var(--accent);background:rgba(200,75,47,.07)}
+.urgent-tag{display:inline-block;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--accent);background:rgba(200,75,47,.1);padding:2px 8px;border-radius:20px;margin-bottom:.6rem;font-family:var(--sans)}
+.aname{font-family:var(--serif);font-weight:900;font-size:1.1rem;margin-bottom:.35rem;letter-spacing:-0.01em}
+.adesc{font-size:.8rem;color:var(--muted);margin-bottom:1.1rem;line-height:1.6}
+.aprice{font-family:var(--serif);font-size:1.8rem;font-weight:900;letter-spacing:-0.04em;color:var(--ink)}
+.aperiod{font-size:.8rem;color:var(--muted);font-family:var(--sans)}
+.amkt{font-size:.75rem;color:var(--muted);text-decoration:line-through;margin-top:.3rem}
+.asave{font-size:.7rem;color:var(--green);background:var(--greenl);padding:2px 9px;border-radius:20px;margin-top:.5rem;display:inline-block;font-weight:600}
+
+/* TRUST */
+.tbar{background:var(--ink2);padding:3rem 2.5rem}
+.tinner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(250,248,244,.07);border:1px solid rgba(250,248,244,.07);border-radius:16px;overflow:hidden}
+.titem{background:var(--ink2);padding:2rem;text-align:center}
+.tnum{font-family:var(--serif);font-size:2.5rem;font-weight:900;color:var(--accentw);letter-spacing:-0.04em}
+.tlabel{font-size:.78rem;color:rgba(250,248,244,.4);margin-top:.35rem;letter-spacing:.03em}
+
+/* FAQ */
+#faq{background:var(--paper2)}
+.fwrap{max-width:740px;margin:3rem auto 0}
+.fitem{border-bottom:1px solid var(--paper3);padding:1.35rem 0}
+.fq{font-family:var(--serif);font-weight:700;font-size:1.1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;letter-spacing:-0.01em;color:var(--ink)}
+.ficon{width:28px;height:28px;border-radius:50%;background:var(--paper3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--muted2);transition:background .2s,transform .25s;font-family:var(--sans)}
+.fitem.open .ficon{background:var(--accent);color:var(--paper);transform:rotate(45deg)}
+.fa{font-size:.9rem;color:var(--muted);line-height:1.75;margin-top:.85rem;display:none;max-width:640px;font-weight:300}
+.fitem.open .fa{display:block}
+
+/* CTA */
+.ctasec{background:var(--accent);padding:7rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.ctabg{position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(240,160,112,.3) 0%,transparent 50%),radial-gradient(circle at 80% 50%,rgba(15,13,10,.2) 0%,transparent 50%);pointer-events:none}
+.ctasec h2{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;letter-spacing:-0.04em;color:var(--paper);margin-bottom:1rem;line-height:1;position:relative}
+.ctasec h2 em{font-style:italic;color:rgba(250,248,244,.6)}
+.ctasec p{color:rgba(250,248,244,.7);font-size:1.1rem;margin-bottom:2.5rem;max-width:440px;margin-left:auto;margin-right:auto;font-weight:300;position:relative}
+.btnw{background:var(--paper);color:var(--accent);padding:1rem 2.5rem;border-radius:8px;font-weight:700;font-size:1.05rem;text-decoration:none;transition:transform .2s,box-shadow .2s;font-family:var(--sans);display:inline-block;position:relative}
+.btnw:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(15,13,10,.2)}
+.ctasub{font-size:.8rem;color:rgba(250,248,244,.5);margin-top:1.25rem;position:relative}
+
+/* FOOTER */
+footer{background:var(--ink);padding:5rem 2.5rem 2.5rem}
+.footer-inner{max-width:1100px;margin:0 auto}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3.5rem;border-bottom:1px solid rgba(250,248,244,.08)}
+.fbrand .logo{display:inline-flex;margin-bottom:1.25rem}
+.fbrand p{font-size:.875rem;color:rgba(250,248,244,.4);line-height:1.75;max-width:280px;font-weight:300}
+.fcol h4{font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,248,244,.35);font-weight:700;margin-bottom:1.25rem}
+.fcol ul{list-style:none}
+.fcol ul li{margin-bottom:.7rem}
+.fcol ul li a{font-size:.875rem;color:rgba(250,248,244,.5);text-decoration:none;transition:color .2s}
+.fcol ul li a:hover{color:var(--paper)}
+.fmid{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;padding:2rem 0;border-bottom:1px solid rgba(250,248,244,.06)}
+.fbadges{display:flex;gap:.75rem;flex-wrap:wrap}
+.fbadge{background:rgba(250,248,244,.05);border:1px solid rgba(250,248,244,.08);border-radius:6px;padding:.4rem .9rem;font-size:.72rem;color:rgba(250,248,244,.4);letter-spacing:.03em}
+.fsocials{display:flex;gap:.75rem}
+.fsoc{width:36px;height:36px;background:rgba(250,248,244,.05);border:1px solid rgba(250,248,244,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:border-color .2s,background .2s}
+.fsoc:hover{border-color:rgba(200,75,47,.4);background:rgba(200,75,47,.1)}
+.fsoc svg{width:15px;height:15px;stroke:rgba(250,248,244,.5);fill:none;stroke-width:2}
+.fbot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding-top:2rem}
+.fcopy{font-size:.78rem;color:rgba(250,248,244,.25)}
+.flegal{display:flex;gap:1.5rem}
+.flegal a{font-size:.78rem;color:rgba(250,248,244,.25);text-decoration:none}
+.flegal a:hover{color:rgba(250,248,244,.5)}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+  .pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:960px){
+  .hbody{grid-template-columns:1fr;gap:2rem}
+  .hactions{align-items:flex-start}
+  .pgrid,.fgrid,.agrid,.blogcards{grid-template-columns:1fr}
+  .tinner{grid-template-columns:repeat(2,1fr)}
+  .ftop{grid-template-columns:1fr 1fr}
+  .fbrand{grid-column:1/-1}
+  .nav-links{display:none}
+}
+@media(max-width:767px){
+  /* comparison table - make scrollable */
+  .cwrap{border-radius:12px}
+  table.ct{font-size:.75rem;min-width:560px}
+  table.ct th,table.ct td{padding:.65rem .75rem}
+  table.ct th.fc,table.ct td.fc{min-width:130px}
+  /* plan cards */
+  .pgrid{grid-template-columns:1fr}
+  .pcard{padding:1.5rem}
+  .pdollar{font-size:2.8rem}
+  .bkdown{padding:.85rem}
+  .bkrow{font-size:.72rem}
+  /* hero */
+  .hstats{flex-direction:column;gap:0}
+  .hstat{border-right:none;padding:.75rem 0;border-top:1px solid rgba(250,248,244,.08)}
+  .hstat:first-child{border-top:none;padding-top:0}
+  .hsnum{font-size:2.2rem}
+  /* features */
+  .fgrid{grid-template-columns:1fr}
+  .fcard{padding:1.5rem}
+  /* addons */
+  .agrid{grid-template-columns:1fr}
+  /* trust */
+  .tinner{grid-template-columns:1fr 1fr}
+  /* footer */
+  .ftop{grid-template-columns:1fr}
+  .fbrand{grid-column:auto}
+  .fmid{flex-direction:column;align-items:flex-start;gap:1rem}
+  .fbot{flex-direction:column;gap:.75rem}
+  .flegal{flex-wrap:wrap;gap:.75rem}
+}
+@media(max-width:480px){
+  nav{padding:.75rem 1rem}
+  section{padding:4rem 1rem}
+  .hero{padding:7rem 1rem 3.5rem}
+  .heyebrow{font-size:.68rem}
+  .hero h1{font-size:clamp(2.5rem,12vw,4rem)}
+  .btn-hero{padding:.8rem 1.5rem;font-size:.9rem}
+  /* comparison table scroll container */
+  .cwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.ct{min-width:500px;font-size:.72rem}
+  table.ct th,table.ct td{padding:.5rem .6rem}
+  /* plan cards */
+  .pcard{padding:1.25rem}
+  .pdollar{font-size:2.4rem}
+  .ppill,.ppill-elite{font-size:.6rem;padding:3px 10px}
+  .badge-3d{font-size:.65rem;padding:2px 8px}
+  .domain-tag{font-size:.65rem;padding:2px 7px}
+  .bkeyebrow{font-size:.6rem}
+  .bkrow{font-size:.7rem;padding:3px 0}
+  .bkl,.bkr{font-size:.7rem}
+  /* blog cards */
+  .blogcards{grid-template-columns:1fr}
+  .blogsec{padding:1.5rem}
+  /* trust */
+  .tinner{grid-template-columns:1fr 1fr}
+  .titem{padding:1.25rem}
+  .tnum{font-size:1.8rem}
+  /* footer */
+  .ftop{gap:2rem}
+  .fbadges{gap:.5rem}
+  .fbadge{font-size:.65rem;padding:.3rem .65rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">
+    <div class="lmark">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#faf8f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    </div>
+    Lauvra
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#comparison">Compare</a></li>
+    <li><a href="#addons">Add-ons</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#pricing" class="nav-cta">Start Free &rarr;</a>
+</nav>
+
+<section class="hero">
+  <div class="htex"></div>
+  <div class="hinner">
+    <div class="heyebrow"><span class="hdot"></span> Launching today &mdash; plans from $12/mo</div>
+    <h1>Your business,<br><span class="la">online today.</span></h1>
+    <div class="hbody">
+      <p class="hsub">We build your professional website completely free. Business email, SSL, and Google setup all included. You just pay for hosting. Live in as little as 24 hours.</p>
+      <div class="hactions">
+        <a href="#pricing" class="btn-hero">See plans from $12/mo &rarr;</a>
+        <a href="#comparison" class="btn-ghost2">How we compare to Squarespace &darr;</a>
+      </div>
+    </div>
+    <div class="hstats">
+      <div class="hstat"><div class="hsnum">$<em>0</em></div><div class="hslabel">Website build cost</div></div>
+      <div class="hstat"><div class="hsnum"><em>24</em>hr</div><div class="hslabel">Priority go-live</div></div>
+      <div class="hstat"><div class="hsnum"><em>76</em>%</div><div class="hslabel">Cheaper than competitors</div></div>
+      <div class="hstat"><div class="hsnum"><em>0</em></div><div class="hslabel">Contracts or lock-ins</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="eyebrow">Everything included</div>
+    <h2 class="stitle">One plan. Everything your<br>business needs <em>online.</em></h2>
+    <p class="ssub">No hidden fees. No DIY frustration. No upsells for things that should be standard. We handle it all.</p>
+    <div class="fgrid">
+      <div class="fcard"><div class="fnum">01</div><div class="fname">Free Website Build</div><div class="fdesc">A professionally designed custom website &mdash; 5, 8, 10, or 12 pages depending on your plan. Built by our team, owned entirely by you from day one.</div></div>
+      <div class="fcard"><div class="fnum">02</div><div class="fname">Domain Included</div><div class="fdesc">Your .com domain is included free for 1 year on Scale, and free for 2 years on Elite. Launch and Grow add a domain for just $12/yr.</div></div>
+      <div class="fcard"><div class="fnum">03</div><div class="fname">Professional Business Email</div><div class="fdesc">yourname@yourbusiness.com &mdash; not Gmail. Multiple accounts included. Looks professional to every client, customer, and partner.</div></div>
+      <div class="fcard"><div class="fnum">04</div><div class="fname">Premium Branded Logo</div><div class="fdesc">A custom logo designed for your business &mdash; free in every plan. Delivered as SVG, PNG, and PDF. Design agencies charge $200&ndash;500 for this alone.</div></div>
+      <div class="fcard"><div class="fnum">05</div><div class="fname">Google Business Setup</div><div class="fdesc">We verify and optimise your Google Business Profile so local customers find you. Most businesses see results within 2&ndash;3 weeks.</div></div>
+      <div class="fcard"><div class="fnum">06</div><div class="fname">SSL &amp; Daily Backups</div><div class="fdesc">Automatic HTTPS on every plan. Daily backups on Grow and Scale. Your site is secure and recoverable &mdash; no technical knowledge required.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div style="text-align:center">
+      <div class="eyebrow">Simple pricing</div>
+      <h2 class="stitle" style="color:var(--paper)">Launch your business <em>today</em></h2>
+      <p class="ssub" style="margin:0 auto;color:rgba(250,248,244,.4)">No setup fees. No contracts. Cancel anytime. Four plans built for every stage of business growth.</p>
+      <div class="ptoggle">
+        <button class="ptab active" id="btnm" onclick="setT('m')">Monthly</button>
+        <button class="ptab" id="btna" onclick="setT('a')">Annual <span class="spill">Save 17%</span></button>
+      </div>
+    </div>
+    <div class="pgrid">
+
+      <!-- LAUNCH $12 -->
+      <div class="pcard">
+        <div class="pname">Launch</div>
+        <div class="ptag">Freelancers &amp; side hustles</div>
+        <div class="pprice monthly-p"><span class="pdollar">$12</span><span class="pper">/mo</span></div>
+        <div class="pprice annual-p"><span class="pdollar">$10</span><span class="pper">/mo</span></div>
+        <div class="pannual monthly-p">Billed $144/year</div>
+        <div class="pannual annual-p">Billed $120/year &mdash; save $24</div>
+        <div class="domain-tag dt-none">&#127760; Domain +$12/yr separately</div>
+        <div class="bkdown">
+          <div class="bkeyebrow">Complete price breakdown</div>
+          <div class="bkrow"><span class="bkl">Enterprise-grade hosting (10GB)</span><span class="bkr">included</span></div>
+          <div class="bkrow"><span class="bkl">Free SSL certificate</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">1 professional email account</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">5-page custom website build</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Google Business Profile setup</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Premium branded logo</span><span class="bkr gold">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Support &amp; onboarding</span><span class="bkr hi">FREE</span></div>
+          <div class="bkfoot"><span class="bkfl">.com domain (optional add-on)</span><span class="bkfr">$12/yr</span></div>
+        </div>
+        <div class="saveband"><strong>Launch your business today for just $12/mo</strong><br>Save $140&ndash;$290/yr vs buying separately &mdash; invest that into growth.</div>
+        <ul class="ful">
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>5-page website &mdash; done for you</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Premium branded logo &mdash; FREE</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>1 professional email account</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>10GB enterprise hosting</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Free SSL &mdash; auto renewed</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Google Business Profile setup</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>99.9% uptime guarantee</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100% mobile responsive design</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Cancel anytime, no fees</li>
+        </ul>
+        <a href="#" class="pbtn pbtn-out">Get Started</a>
+      </div>
+
+      <!-- GROW $19 -->
+      <div class="pcard">
+        <div class="pname">Grow</div>
+        <div class="ptag">Small businesses &amp; shops</div>
+        <div class="pprice monthly-p"><span class="pdollar">$19</span><span class="pper">/mo</span></div>
+        <div class="pprice annual-p"><span class="pdollar">$15.83</span><span class="pper">/mo</span></div>
+        <div class="pannual monthly-p">Billed $228/yr</div>
+        <div class="pannual annual-p">Billed $190/yr &mdash; save $38</div>
+        <div class="domain-tag dt-none">&#127760; Domain +$12/yr separately</div>
+        <div class="bkdown">
+          <div class="bkeyebrow">Complete price breakdown</div>
+          <div class="bkrow"><span class="bkl">Enterprise-grade hosting (50GB)</span><span class="bkr">included</span></div>
+          <div class="bkrow"><span class="bkl">SSL + daily backups</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">2 professional email accounts</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">8-page custom website build</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Google Business setup &amp; verify</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Premium branded logo</span><span class="bkr gold">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Monthly performance report</span><span class="bkr hi">FREE</span></div>
+          <div class="bkfoot"><span class="bkfl">.com domain (optional add-on)</span><span class="bkfr">$12/yr</span></div>
+        </div>
+        <div class="saveband"><strong>Launch your business today for just $19/mo</strong><br>Save $290&ndash;$690/yr vs buying separately &mdash; put that into ads &amp; customers.</div>
+        <ul class="ful">
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>8-page website &mdash; done for you</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Premium branded logo &mdash; FREE</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>2 professional email accounts</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>50GB enterprise hosting</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SSL + daily backups</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Google Business setup &amp; verify</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Monthly performance report</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100% mobile responsive design</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Priority support</li>
+        </ul>
+        <a href="#" class="pbtn pbtn-out">Get Started</a>
+      </div>
+
+      <!-- SCALE $29 RECOMMENDED -->
+      <div class="pcard pop" style="position:relative">
+        <div class="ppill">&#11088; RECOMMENDED</div>
+        <div class="pname">Scale</div>
+        <div class="ptag">Established businesses</div>
+        <div class="pprice monthly-p"><span class="pdollar">$29</span><span class="pper">/mo</span></div>
+        <div class="pprice annual-p"><span class="pdollar">$24.17</span><span class="pper">/mo</span></div>
+        <div class="pannual monthly-p">Billed $348/yr</div>
+        <div class="pannual annual-p">Billed $290/yr &mdash; save $58</div>
+        <div class="badge-3d badge-3d-scale">&#10024; 3D Animated Premium Website</div><br>
+        <div class="domain-tag dt-yr1">&#127760; .com domain free &mdash; year 1 included</div>
+        <div class="bkdown">
+          <div class="bkeyebrow">Complete price breakdown</div>
+          <div class="bkrow"><span class="bkl">Unlimited enterprise hosting</span><span class="bkr">included</span></div>
+          <div class="bkrow"><span class="bkl">.com domain year 1 free</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">SSL + backups + malware scan</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">3 professional email accounts</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">10-page 3D animated website</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">GBP setup + 3 months optimisation</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Domain verification</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Google Search Console setup</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Google Analytics setup</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Mobile responsive design</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">SEO content for your industry &amp; location</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Blog insights page setup</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Premium branded logo</span><span class="bkr gold">FREE</span></div>
+          <div class="bkfoot"><span class="bkfl">Domain year 2 renewal</span><span class="bkfr">$12/yr</span></div>
+        </div>
+        <div class="saveband"><strong>Launch your business today for just $29/mo</strong><br>Save $1,230&ndash;$2,230/yr vs buying separately &mdash; real money back in your pocket.</div>
+        <ul class="ful">
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>10-page 3D animated website</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Premium branded logo &mdash; FREE</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>.com domain &mdash; year 1 included</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>3 professional email accounts</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Unlimited enterprise hosting</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SSL + backups + malware scan</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Domain verification</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Google Search Console setup</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Google Analytics setup</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GBP setup + 3 months optimisation</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100% mobile responsive design</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SEO-optimised content for your industry &amp; location</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Blog insights page setup</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>24/7 priority support</li>
+        </ul>
+        <a href="#" class="pbtn pbtn-acc">Get Started &mdash; Recommended</a>
+      </div>
+
+      <!-- ELITE $49 -->
+      <div class="pcard elite" style="position:relative">
+        <div class="ppill-elite">&#128142; ELITE</div>
+        <div class="pname">Elite</div>
+        <div class="ptag">Agencies &amp; serious brands</div>
+        <div class="pprice monthly-p"><span class="pdollar">$49</span><span class="pper">/mo</span></div>
+        <div class="pprice annual-p"><span class="pdollar">$40.83</span><span class="pper">/mo</span></div>
+        <div class="pannual monthly-p">Billed $588/yr</div>
+        <div class="pannual annual-p">Billed $490/yr &mdash; save $98</div>
+        <div class="badge-3d badge-3d-elite">&#10024; 3D Animated Premium Website</div><br>
+        <div class="domain-tag dt-yr2">&#127760; .com domain free &mdash; 2 years included</div>
+        <div class="bkdown">
+          <div class="bkeyebrow">Complete price breakdown</div>
+          <div class="bkrow"><span class="bkl">Unlimited enterprise hosting</span><span class="bkr">included</span></div>
+          <div class="bkrow"><span class="bkl">.com domain 2 years free</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">SSL + backups + malware scan</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">5 professional email accounts</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">12-page 3D animated website</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">GBP setup + 6 months optimisation</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Domain verification</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Google Search Console setup</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Google Analytics setup</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Monthly users traffic report</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Mobile responsive design</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">SEO content for your industry &amp; location</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Blog insights page setup</span><span class="bkr hi">FREE</span></div>
+          <div class="bkrow"><span class="bkl">Premium branded logo</span><span class="bkr gold">FREE</span></div>
+          <div class="bkfoot"><span class="bkfl">Domain year 3 renewal</span><span class="bkfr">$12/yr</span></div>
+        </div>
+        <div class="saveband"><strong>The complete package for just $49/mo</strong><br>Everything you need &mdash; 12 pages, 5 emails, 2 years domain, full analytics &amp; monthly reporting.</div>
+        <ul class="ful">
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>12-page 3D animated website</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Premium branded logo &mdash; FREE</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>.com domain &mdash; 2 years included</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>5 professional email accounts</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Unlimited enterprise hosting</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SSL + backups + malware scan</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Domain verification</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Google Search Console setup</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Google Analytics setup</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Monthly users traffic report</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100% mobile responsive design</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SEO-optimised content for your industry &amp; location</li>
+          <li class="hi"><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Blog insights page setup</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GBP setup + 6 months optimisation</li>
+          <li><svg class="chk" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>24/7 dedicated support</li>
+        </ul>
+        <a href="#" class="pbtn" style="background:linear-gradient(90deg,#7c3aed,#4f46e5);color:#fff">Get Started &mdash; Elite</a>
+      </div>
+
+    </div>
+
+    <!-- BLOG SEO ADD-ON -->
+    <div class="blogsec">
+      <div class="blogtitle">&#128240; Google-ranked SEO blog articles</div>
+      <div class="blogsub">Keyword-optimised articles written for your industry and published on your website. Each targets real search terms your customers type into Google &mdash; building long-term organic traffic that compounds every month.</div>
+      <div class="blogcards">
+        <div class="blogcard">
+          <div class="blognum">4</div>
+          <div class="blogunit">articles</div>
+          <div class="blogprice">$29</div>
+          <div class="blogdesc">Starter SEO &mdash; 4 keyword articles delivered and published on your site</div>
+        </div>
+        <div class="blogcard featured">
+          <div class="blognum" style="color:var(--gold)">8</div>
+          <div class="blogunit">articles</div>
+          <div class="blogprice">$49</div>
+          <div class="blogdesc">Serious push &mdash; 8 articles covering your key services and local search terms</div>
+        </div>
+        <div class="blogcard">
+          <div class="blognum">15</div>
+          <div class="blogunit">articles</div>
+          <div class="blogprice">$99</div>
+          <div class="blogdesc">Full authority &mdash; 15 articles establishing you as the go-to local expert on Google</div>
+        </div>
+      </div>
+    </div>
+    <div class="logoband">
+      <h3>Premium branded logo &mdash; free with every plan</h3>
+      <p>Custom logo designed for your business. Delivered as SVG, PNG and PDF. Design agencies charge $200&ndash;500 for this. You pay $0.</p>
+      <div class="lsamples">
+        <div class="lsamp lc1">&zwnj;&#9889; Voltco</div>
+        <div class="lsamp lc2">&#9670; Arkon</div>
+        <div class="lsamp lc3">&#10022; Blume</div>
+        <div class="lsamp lc4">&#9650; Prism</div>
+        <div class="lsamp lc5">&#9679; Verd</div>
+      </div>
+      <p class="lnote">Style examples only &mdash; your logo is designed specifically for your business name and industry</p>
+    </div>
+  </div>
+</section>
+
+<section id="comparison">
+  <div class="container">
+    <div class="eyebrow">Honest comparison</div>
+    <h2 class="stitle">How Lauvra stacks up against<br>the <em>big names</em></h2>
+    <p class="ssub">Real published prices. No tricks. Comparison uses standard rates for one website, hosting, and business email accounts at each provider.</p>
+    <div class="cwrap">
+      <table class="ct">
+        <thead>
+          <tr>
+            <th class="fc" style="width:26%">What you need</th>
+            <th class="zc">Lauvra<br><span style="font-size:.7rem;font-weight:400;opacity:.7">Scale plan</span></th>
+            <th>Squarespace<br><span style="font-size:.7rem;font-weight:400;color:rgba(250,248,244,.4)">Business $23/mo</span></th>
+            <th>Wix<br><span style="font-size:.7rem;font-weight:400;color:rgba(250,248,244,.4)">Core $17/mo</span></th>
+            <th>GoDaddy<br><span style="font-size:.7rem;font-weight:400;color:rgba(250,248,244,.4)">Website + email</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="fc">Website hosting /yr</td>
+            <td class="zc"><span class="zp">included</span></td>
+            <td><span class="bp">$276/yr</span></td>
+            <td><span class="bp">$204/yr</span></td>
+            <td><span class="bp">$215/yr</span></td>
+          </tr>
+          <tr>
+            <td class="fc">.com domain /yr</td>
+            <td class="zc"><span class="zp">FREE yr 1</span><br><span style="font-size:.75rem;color:var(--muted)">$12/yr from yr 2</span></td>
+            <td>Free yr 1<br><span style="font-size:.75rem;color:var(--muted)">$20/yr renewal</span></td>
+            <td>Free yr 1<br><span style="font-size:.75rem;color:var(--muted)">$15/yr renewal</span></td>
+            <td><span class="bp">$21/yr</span></td>
+          </tr>
+          <tr>
+            <td class="fc">Business email accounts /yr</td>
+            <td class="zc"><span class="zp">1&ndash;5 FREE</span><br><span style="font-size:.75rem;color:var(--muted)">included permanently</span></td>
+            <td><span class="bp">1 inbox free yr 1 only</span><br><span style="font-size:.75rem;color:var(--muted)">then $7&ndash;22/user/mo after</span></td>
+            <td><span class="bp">Not included</span><br><span style="font-size:.75rem;color:var(--muted)">separate purchase required</span></td>
+            <td><span class="bp">Not included</span><br><span style="font-size:.75rem;color:var(--muted)">separate purchase required</span></td>
+          </tr>
+          <tr>
+            <td class="fc">Website built for you</td>
+            <td class="zc"><span class="yes">&#10003;</span> Up to 12 pages, FREE</td>
+            <td><span class="no">&#10007;</span> DIY templates only</td>
+            <td><span class="no">&#10007;</span> DIY templates only</td>
+            <td><span class="no">&#10007;</span> DIY templates only</td>
+          </tr>
+          <tr>
+            <td class="fc">Mobile responsive design</td>
+            <td class="zc"><span class="yes">&#10003;</span> All plans</td>
+            <td><span class="no">&#10007;</span> DIY — you handle it</td>
+            <td><span class="no">&#10007;</span> DIY — you handle it</td>
+            <td><span class="no">&#10007;</span> DIY — you handle it</td>
+          </tr>
+          <tr>
+            <td class="fc">SEO content + blog setup</td>
+            <td class="zc"><span class="yes">&#10003;</span> Scale &amp; Elite</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+          </tr>
+          <tr>
+            <td class="fc">Google Search Console + Analytics</td>
+            <td class="zc"><span class="yes">&#10003;</span> Scale &amp; Elite</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+          </tr>
+          <tr>
+            <td class="fc">Google Business setup</td>
+            <td class="zc"><span class="yes">&#10003;</span> FREE</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+          </tr>
+          <tr>
+            <td class="fc">Premium logo design</td>
+            <td class="zc"><span class="yes">&#10003;</span> FREE</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+            <td><span class="no">&#10007;</span> Not included</td>
+          </tr>
+          <tr>
+            <td class="fc">Free SSL certificate</td>
+            <td class="zc"><span class="yes">&#10003;</span> FREE</td>
+            <td><span class="yes">&#10003;</span> Included</td>
+            <td><span class="yes">&#10003;</span> Included</td>
+            <td><span class="bp">$84/yr extra</span></td>
+          </tr>
+          <tr>
+            <td class="fc">Flexible billing</td>
+            <td class="zc"><span class="yes">&#10003;</span> Cancel anytime</td>
+            <td style="color:var(--muted)">Annual contract</td>
+            <td style="color:var(--muted)">Annual contract</td>
+            <td style="color:var(--muted)">Annual contract</td>
+          </tr>
+          <tr>
+            <td class="fc" style="font-size:1rem">Total year 1 cost<br><span style="font-size:.72rem;font-weight:400;color:var(--muted)">incl. 3 business emails</span></td>
+            <td class="zc"><span class="zp" style="font-size:1.5rem">$348/yr</span><br><span style="font-size:.72rem;color:var(--muted)">Scale · domain + 3 emails included</span></td>
+            <td><span class="bp" style="font-size:1.05rem">$492/yr</span><br><span style="font-size:.72rem;color:var(--muted)">$276 hosting + $216 email (3 users)</span></td>
+            <td><span class="bp" style="font-size:1.05rem">$420/yr</span><br><span style="font-size:.72rem;color:var(--muted)">$204 hosting + $216 email (3 users)</span></td>
+            <td><span class="bp" style="font-size:1.05rem">$596/yr</span><br><span style="font-size:.72rem;color:var(--muted)">$215 hosting + $216 email + $21 domain + $84 SSL</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cnote">All competitor prices sourced from published standard rates as of 2026. Squarespace Core plan $23/mo billed annually — includes 1 Google Workspace inbox free for year 1 only, then $7–$22/user/mo billed annually thereafter. Wix Core plan $17/mo billed annually — business email not included in any Wix plan, must be purchased separately via Google Workspace. GoDaddy Website Builder $18/mo + domain $21/yr + SSL $84/yr + email purchased separately. Total year 1 cost calculated including 3 professional business email accounts at each provider's standard rate where applicable. All prices USD.</p>
+  </div>
+</section>
+
+<section id="addons">
+  <div class="container">
+    <div class="eyebrow">Add-ons</div>
+    <h2 class="stitle">Need more? Add only what<br>you <em>actually need.</em></h2>
+    <p class="ssub">Every add-on is priced at a fraction of what specialist tools charge. Pay for what you use &mdash; nothing more.</p>
+    <div style="margin-top:3.5rem;margin-bottom:1rem">
+      <div style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2);font-weight:700;margin-bottom:1rem;font-family:var(--sans)">Delivery timeline by plan</div>
+      <div style="background:var(--paper2);border:1px solid var(--paper3);border-radius:16px;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;font-size:.875rem">
+          <thead>
+            <tr style="background:var(--ink2)">
+              <th style="padding:.85rem 1.25rem;text-align:left;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(250,248,244,.4);font-weight:600;border-bottom:1px solid rgba(250,248,244,.08)">Plan</th>
+              <th style="padding:.85rem 1.25rem;text-align:center;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(250,248,244,.4);font-weight:600;border-bottom:1px solid rgba(250,248,244,.08)">Standard</th>
+              <th style="padding:.85rem 1.25rem;text-align:center;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:var(--accentw);font-weight:600;border-bottom:1px solid rgba(250,248,244,.08)">&#9889; Priority +fee</th>
+              <th style="padding:.85rem 1.25rem;text-align:center;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;color:#f87171;font-weight:600;border-bottom:1px solid rgba(250,248,244,.08)">&#128293; Emergency +fee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding:.85rem 1.25rem;font-weight:600;color:var(--ink3);border-bottom:1px solid var(--paper3);background:var(--paper)">Launch (5 pages)</td>
+              <td style="padding:.85rem 1.25rem;text-align:center;color:var(--muted);border-bottom:1px solid var(--paper3);background:var(--paper)">3 business days</td>
+              <td style="padding:.85rem 1.25rem;text-align:center;border-bottom:1px solid var(--paper3);background:rgba(200,75,47,.03)"><strong style="color:var(--accent)">24 hours</strong><br><span style="font-size:.75rem;color:var(--muted)">+$49</span></td>
+              <td style="padding:.85rem 1.25rem;text-align:center;border-bottom:1px solid var(--paper3);background:rgba(200,75,47,.03)"><strong style="color:#ef4444">8 hours</strong><br><span style="font-size:.75rem;color:var(--muted)">+$99</span></td>
+            </tr>
+            <tr>
+              <td style="padding:.85rem 1.25rem;font-weight:600;color:var(--ink3);border-bottom:1px solid var(--paper3);background:var(--paper)">Grow (8 pages)</td>
+              <td style="padding:.85rem 1.25rem;text-align:center;color:var(--muted);border-bottom:1px solid var(--paper3);background:var(--paper)">3 business days</td>
+              <td style="padding:.85rem 1.25rem;text-align:center;border-bottom:1px solid var(--paper3);background:rgba(200,75,47,.03)"><strong style="color:var(--accent)">24 hours</strong><br><span style="font-size:.75rem;color:var(--muted)">+$69</span></td>
+              <td style="padding:.85rem 1.25rem;text-align:center;border-bottom:1px solid var(--paper3);background:rgba(200,75,47,.03)"><strong style="color:#ef4444">8 hours</strong><br><span style="font-size:.75rem;color:var(--muted)">+$149</span></td>
+            </tr>
+            <tr>
+              <td style="padding:.85rem 1.25rem;font-weight:600;color:var(--ink3);background:var(--paper)">Scale (12 pages)</td>
+              <td style="padding:.85rem 1.25rem;text-align:center;color:var(--muted);background:var(--paper)">4 business days</td>
+              <td style="padding:.85rem 1.25rem;text-align:center;background:rgba(200,75,47,.03)"><strong style="color:var(--accent)">48 hours</strong><br><span style="font-size:.75rem;color:var(--muted)">+$99</span></td>
+              <td style="padding:.85rem 1.25rem;text-align:center;background:rgba(200,75,47,.03)"><strong style="color:#ef4444">24 hours</strong><br><span style="font-size:.75rem;color:var(--muted)">+$199</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.72rem;color:var(--muted);margin-top:.6rem;line-height:1.5">Priority and Emergency delivery requires content submission (logo, photos, text) within 1 hour of purchase. Delivery window begins once your content is received. Guaranteed or full refund of the rush fee.</p>
+    </div>
+    <div class="agrid">
+      <div class="acard"><div class="aname">Extra .com Domain</div><div class="adesc">Additional domain registration and DNS management. Auto-renewal reminders 60 days before expiry.</div><div class="aprice">$12<span class="aperiod">/yr</span></div><div class="amkt">GoDaddy renewal: $21/yr</div><div class="asave">You save $9/yr per domain</div></div>
+      <div class="acard"><div class="aname">Extra Email Account</div><div class="adesc">Additional professional email inbox beyond your plan limit. Full mobile and desktop access included.</div><div class="aprice">$2<span class="aperiod">/mo per inbox</span></div><div class="amkt">Separate email plans: $6/user/mo</div><div class="asave">You save $4/mo per inbox</div></div>
+      <div class="acard"><div class="aname">Extra Website Pages</div><div class="adesc">5 additional custom-designed pages added to your site. Delivered within your chosen delivery window.</div><div class="aprice">$25<span class="aperiod"> per 5 pages</span></div><div class="amkt">Freelance designer: $100&ndash;250</div><div class="asave">You save $75&ndash;225</div></div>
+      <div class="acard"><div class="aname">GBP Monthly Management</div><div class="adesc">Weekly Google Business Profile posts, Q&amp;A monitoring, photo updates and local keyword optimisation.</div><div class="aprice">$29<span class="aperiod">/mo</span></div><div class="amkt">Local agency: $100&ndash;300/mo</div><div class="asave">You save $71&ndash;271/mo</div></div>
+      <div class="acard"><div class="aname">Review Management</div><div class="adesc">Monitor, respond to and report on your Google reviews monthly. Includes automated review request setup.</div><div class="aprice">$19<span class="aperiod">/mo</span></div><div class="amkt">Podium / Birdeye: $99&ndash;299/mo</div><div class="asave">You save $80&ndash;280/mo</div></div>
+      <div class="acard"><div class="aname">Speed Optimisation</div><div class="adesc">CDN setup, image compression, caching and Core Web Vitals improvements. One-time service, lasting results.</div><div class="aprice">$49<span class="aperiod"> one-time</span></div><div class="amkt">Agency / freelancer: $150&ndash;500</div><div class="asave">You save $101&ndash;451</div></div>
+      <div class="acard urgent"><div class="urgent-tag">&#9889; Priority Delivery</div><div class="aname">24-Hour Build</div><div class="adesc">Need your website tomorrow? Submit your content by 9am and your site is live by 9am the next day. Dedicated build slot, no queue.</div><div class="aprice">+$49&ndash;$99<span class="aperiod"> one-time</span></div><div class="amkt" style="text-decoration:none;color:var(--muted)">Launch $49 &middot; Grow $69 &middot; Scale $99</div><div class="asave" style="background:rgba(200,75,47,.1);color:var(--accent)">Live in 24 hours guaranteed</div></div>
+      <div class="acard urgent"><div class="urgent-tag">&#128293; Emergency Same-Day</div><div class="aname">8-Hour Rush Build</div><div class="adesc">Absolute fastest turnaround. Submit everything by 10am, your site is live before 6pm the same day. For when you needed it yesterday.</div><div class="aprice">+$99&ndash;$199<span class="aperiod"> one-time</span></div><div class="amkt" style="text-decoration:none;color:var(--muted)">Launch $99 &middot; Grow $149 &middot; Scale $199</div><div class="asave" style="background:rgba(200,75,47,.1);color:var(--accent)">Live same day guaranteed</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="tbar">
+  <div class="tinner">
+    <div class="titem"><div class="tnum">$0</div><div class="tlabel">Website build cost</div></div>
+    <div class="titem"><div class="tnum">4</div><div class="tlabel">Plans from $12/mo</div></div>
+    <div class="titem"><div class="tnum">24hr</div><div class="tlabel">Priority go-live option</div></div>
+    <div class="titem"><div class="tnum">0</div><div class="tlabel">Contracts or lock-ins</div></div>
+  </div>
+</div>
+
+<section id="faq">
+  <div class="container" style="text-align:center">
+    <div class="eyebrow">FAQ</div>
+    <h2 class="stitle">Questions, <em>answered.</em></h2>
+    <div class="fwrap">
+      <div class="fitem"><div class="fq" onclick="tFaq(this)">Why is the website build free? What's the catch?<span class="ficon">+</span></div><div class="fa">No catch at all. We build your website free because your monthly hosting subscription is how we sustain the service. As long as you're a Lauvra customer, your website is live, maintained, and fully supported. It's a partnership &mdash; we invest in building your online presence, you invest in a plan that keeps it running.</div></div>
+      <div class="fitem"><div class="fq" onclick="tFaq(this)">What does "domain included" mean on Scale and Elite?<span class="ficon">+</span></div><div class="fa">On the Scale plan your .com domain is completely free in year 1. From year 2 onward renewal is $12/year &mdash; we remind you 60 days ahead. On the Elite plan your domain is free for the first 2 years, then $12/year from year 3. Launch and Grow plans don&rsquo;t include a domain, but you can add one for $12/year &mdash; the cheapest renewal rate available, cheaper than GoDaddy ($21/yr) and Squarespace ($20/yr).</div></div>
+      <div class="fitem"><div class="fq" onclick="tFaq(this)">What kind of email do I get?<span class="ficon">+</span></div><div class="fa">You get a fully professional yourname@yourbusiness.com email account &mdash; not a Gmail address. It works on all devices including mobile, includes a calendar, and looks completely professional to every client and customer you email.</div></div>
+      <div class="fitem"><div class="fq" onclick="tFaq(this)">How long until my website is live?<span class="ficon">+</span></div><div class="fa">Standard delivery is 3 business days from the moment you complete our onboarding questionnaire. Need it faster? Priority delivery gets you live in 24 hours, and our Emergency same-day service delivers within 8 hours. Both are available as add-ons at checkout.</div></div>
+      <div class="fitem"><div class="fq" onclick="tFaq(this)">Can I upgrade or downgrade my plan?<span class="ficon">+</span></div><div class="fa">Yes, at any time. Upgrades are prorated immediately. Downgrades take effect at the end of your current billing period. No penalties, no awkward conversations.</div></div>
+      <div class="fitem"><div class="fq" onclick="tFaq(this)">Do I need any technical knowledge?<span class="ficon">+</span></div><div class="fa">None at all. We handle everything &mdash; domain setup, hosting configuration, email setup, SSL installation, and Google Business Profile verification. You just tell us about your business and we take it from there.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ctasec">
+  <div class="ctabg"></div>
+  <div class="container" style="position:relative">
+    <div class="eyebrow" style="color:rgba(250,248,244,.6);justify-content:center;display:flex">Start today</div>
+    <h2>Your business deserves<br>to be <em>found.</em></h2>
+    <p>Free website. Professional email. Google setup. All from $12/month. No contracts, no catch.</p>
+    <a href="#pricing" class="btnw">Launch my business &mdash; from $12/mo</a>
+    <div class="ctasub">No setup fees &middot; Cancel anytime &middot; No contracts</div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="ftop">
+      <div class="fbrand">
+        <a href="#" class="logo" style="color:var(--paper)">
+          <div class="lmark" style="width:32px;height:32px">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#faf8f4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          Lauvra
+        </a>
+        <p>We build your professional website free and handle everything so you can focus on what you do best &mdash; running your business.</p>
+      </div>
+      <div class="fcol">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#addons">Add-ons</a></li>
+          <li><a href="#comparison">Compare</a></li>
+          <li><a href="#">Agency Plans</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Work</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Affiliates</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">WhatsApp Support</a></li>
+          <li><a href="#">Status Page</a></li>
+          <li><a href="#">Migrate to Lauvra</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fmid">
+      <div class="fbadges">
+        <div class="fbadge">99.9% Uptime</div>
+        <div class="fbadge">Cancel Anytime</div>
+        <div class="fbadge">No Contracts</div>
+        <div class="fbadge">Free Website Build</div>
+        <div class="fbadge">SSL Secured</div>
+      </div>
+      <div class="fsocials">
+        <a href="#" class="fsoc" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#" class="fsoc" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" class="fsoc" title="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        <a href="#" class="fsoc" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div class="fbot">
+      <div class="fcopy">&copy; 2026 Lauvra. All rights reserved.</div>
+      <div class="flegal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Refund Policy</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setT(t){document.body.classList.toggle('annual',t==='a');document.getElementById('btnm').classList.toggle('active',t==='m');document.getElementById('btna').classList.toggle('active',t==='a')}
+function tFaq(el){el.parentElement.classList.toggle('open')}
+</script>
+</body>
+</html>
